@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calc</title>
+</head>
+<body>
+<script>
+let number1 = prompt("Enter the first number:");
+number1 = parseFloat(number1);
+
+if (number1) {
+    let operator = prompt("Enter an operator such as +,-,*, or /:");
+
+    let number2 = prompt("Enter the second number:");
+    number2 = parseFloat(number2);
+
+    if (number2) {
+        let result;
+        if (operator == "+") {
+            result = number1 + number2;
+        } else if (operator == "-") {
+            result = number1 - number2;
+        } else if (operator == "*") {
+            result = number1 * number2;
+        } else if (operator == "/") {
+            result = number1 / number2;
+        } else {
+            alert("Invalid operator. Please refresh and try again.");
+            result = null;
+        }
+
+        if (result != null) {
+            alert("The result is: " + result);
+        }
+    }
+}
+</script>
+</body>
+</html>
